@@ -11,15 +11,14 @@
 	},
 	"sourcePaths": ["source"],
 	"importPaths": ["source"],
-	"sourceFiles-windows-x86_mscoff": ["precompiled/windows-x86/webview.lib"],
-	"sourceFiles-windows-x86_64": ["precompiled/windows-x64/webview.lib"],
-	"lflags-linux-x86_64": ["-Lprecompiled/linux-x86_64/", "-lwebview"],
-	"lflags-osx-x86_64": ["-Lprecompiled/macos-x64/", "-lwebview"],
-	"lflags-osx-arm64": ["-Lprecompiled/macos-arm64/", "-lwebview"],
+	"sourceFiles-windows-x86_mscoff": ["$PACKAGE_DIR/precompiled/windows-x86/webview.lib"],
+	"sourceFiles-windows-x86_64": ["$PACKAGE_DIR/precompiled/windows-x64/webview.lib"],
+    "sourceFiles-linux-x86_64": ["$PACKAGE_DIR/precompiled/linux-x86_64/libwebview.a"],
+    "sourceFiles-osx-x86_64": ["$PACKAGE_DIR/precompiled/macos-x64/libwebview.a"],
+    "sourceFiles-osx-arm64": ["$PACKAGE_DIR/precompiled/macos-arm64/libwebview.a"],
 	"libs-linux": ["dl", "gtk-3", "webkit2gtk-4.1", "stdc++"],
 	"libs-windows": ["advapi32", "ole32", "shell32", "shlwapi", "user32", "version"],
 	"lflags-osx": ["-framework WebKit", "-ldl"],
-
 	"configurations": [
 		{
 			"name": "library",
