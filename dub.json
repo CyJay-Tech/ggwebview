@@ -1,0 +1,53 @@
+{
+	"authors": [
+		"Carlos"
+	],
+	"description": "A D wrapper for the webview library.",
+	"homepage": "https://github.com/seu-usuario/ggwebview",
+	"license": "MIT",
+	"name": "ggwebview",
+	"dependencies": {
+		"stdx-allocator": "~>2.77.5"
+	},
+	"sourcePaths": ["source"],
+	"importPaths": ["source"],
+	"sourceFiles-windows-x86_mscoff": ["precompiled/windows-x86/webview.lib"],
+	"sourceFiles-windows-x86_64": ["precompiled/windows-x64/webview.lib"],
+	"lflags-linux-x86_64": ["-Lprecompiled/linux-x86_64/", "-lwebview"],
+	"lflags-osx-x86_64": ["-Lprecompiled/macos-x64/", "-lwebview"],
+	"lflags-osx-arm64": ["-Lprecompiled/macos-arm64/", "-lwebview"],
+	"libs-linux": ["dl", "gtk-3", "webkit2gtk-4.1", "stdc++"],
+	"libs-windows": ["advapi32", "ole32", "shell32", "shlwapi", "user32", "version"],
+	"lflags-osx": ["-framework WebKit", "-ldl"],
+
+	"configurations": [
+		{
+			"name": "library",
+			"targetType": "library"
+		},
+		{
+			"name": "example_basic",
+			"targetType": "executable",
+			"mainSourceFile": "source/examples/basic_app.d",
+			"targetName": "basic_app_example"
+		},
+		{
+			"name": "example_local_files",
+			"targetType": "executable",
+			"mainSourceFile": "source/examples/local_files_app.d",
+			"targetName": "local_files_example"
+		},
+		{
+			"name": "example_remote_url",
+			"targetType": "executable",
+			"mainSourceFile": "source/examples/remote_url_app.d",
+			"targetName": "remote_url_example"
+		},
+		{
+			"name": "example_ipc_detailed",
+			"targetType": "executable",
+			"mainSourceFile": "source/examples/ipc_detailed_app.d",
+			"targetName": "ipc_detailed_example"
+		}
+	]
+}
