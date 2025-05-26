@@ -3,7 +3,7 @@
 		"Carlos"
 	],
 	"description": "A D wrapper for the webview library.",
-	"homepage": "https://github.com/seu-usuario/ggwebview",
+	"homepage": "https://github.com/CyJay-Tech/ggwebview",
 	"license": "MIT",
 	"name": "ggwebview",
 	"dependencies": {
