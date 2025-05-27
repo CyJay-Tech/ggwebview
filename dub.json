@@ -13,7 +13,8 @@
 	"importPaths": ["source"],
 
 	"sourceFiles-windows-x86_mscoff": ["$PACKAGE_DIR/precompiled/windows-x86/webview.lib"],
-	"sourceFiles-windows-x86_64": ["$PACKAGE_DIR/precompiled/windows-x64/webview.lib"],
+	"sourceFiles-windows-x86_64_mscoff": ["$PACKAGE_DIR/precompiled/windows-x64/webview.lib"],
+	"dflags-windows-mscoff": ["-L/MD"],
 
     "lflags-linux-x86_64": ["-L$PACKAGE_DIR/precompiled/linux-x86_64/", "-lwebview"],
     "lflags-osx-x86_64": ["-L$PACKAGE_DIR/precompiled/macos-x64/", "-lwebview"],
