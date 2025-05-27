@@ -9,6 +9,7 @@
 	"dependencies": {
 		"stdx-allocator": "~>2.77.5"
 	},
+    "version": "0.1.4",
 	"sourcePaths": ["source"],
 	"importPaths": ["source"],
 
